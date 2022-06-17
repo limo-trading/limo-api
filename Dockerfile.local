@@ -1,0 +1,9 @@
+FROM golang:1.18
+
+COPY . /app
+
+WORKDIR /app/src
+
+RUN go mod vendor
+
+CMD ["fresh"]
